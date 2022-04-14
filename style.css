@@ -1,21 +1,45 @@
 /* You're welcome to change any of this! */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 * {
     box-sizing: border-box;
 }
 
+
 body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
+    margin: 10px;
+    font-family: 'Source Sans Pro', sans-serif;;
+    background-color: #CC95C0;
+    
 }
 header, section {
-    padding: 20px;
+    padding: auto;
+
+
+     
+
 }
 p, li {
     line-height: 1.5em;
 }
 
+#tutorials {
+   
+    padding-top: 0px;
+    padding-bottom: 10px;
+    background-color:#FFDDD2;
+    
+}
+
+#homework {
+    
+    padding-top: 0px;
+    padding-bottom: 10px;
+    ;
+}
+
 #inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+    padding-top: 0px;
+    padding-bottom: 10px;
+
 }
