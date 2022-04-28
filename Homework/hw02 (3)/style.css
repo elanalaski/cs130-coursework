@@ -1,0 +1,303 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+/* Your Code Here */
+
+a { 
+    
+    display: flex;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+a i {
+    padding-right: 10%;
+    padding-left: 8%;
+
+}
+
+h1{
+    display: flex;
+    padding-left: 5%;
+}
+
+h1 i{
+    padding-right: 3%;
+}
+
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+/* Your Code Here */
+
+header  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: flex-end; */
+    padding-right: 40px;
+    padding-left: 900px;
+    /* padding-top: 1%; */
+  
+    /* text-align: center; */
+    height: 20px;
+    /* width: 1000px; */
+    margin-right: auto;
+    border-radius: 50px;
+   
+ 
+    
+}
+
+header a{
+    border: solid 1px white;
+    border-radius: 50px;
+    /* height: 30px; */
+    flex-direction: wrap;
+    /* justify-content: flex-end; */
+    margin-top: 10px;
+    /* text-align: center; */
+    margin: 10px;
+    
+   
+}
+/* 
+header i{
+    justify-content: center;
+} */
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 65%;
+    padding-left: 1%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+
+
+
+
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+/* Your Code Here */
+
+/* section  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 20%;
+    height: 10%;
+    border: solid 1px rgb(128,128, 128);
+    
+
+} */
+
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+
+
+section {
+   display: flex;
+    margin: 10px;
+    padding-bottom: 20px;
+    /* border: solid 1px white; */
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 200px;
+    height: 250px;
+    background-color: #222222;
+    
+    
+    /* 292828; */
+        
+}
+
+section div, section button, div h2, div p{
+    /* margin-left: 10px; */
+    /* margin-right: 10px;  */
+    /* margin-top: 10px;  */
+    /* margin-bottom: 10px; */
+    justify-content: flex-start;
+    flex-wrap: wrap;   
+    margin: 3px;
+}
+
+section button{
+    display: none;
+}
+
+div h2{
+    font-size: small;
+    font-weight: bold;
+    justify-content: flex-start;
+
+}
+
+div p{
+    font-size: smaller;
+    justify-content: flex-start;  
+    color: #D8D1D1;
+}
+
+section img { 
+    flex-wrap: wrap;
+    width: 140px ; 
+    border-radius: 100px;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* Your Code Here */
+
+@media only screen and (max-width: 1000px) {
+    main {
+        flex-wrap: wrap;
+    }
+    section {
+        width: calc(50% - 20px);
+
+    }
+
+    header{
+        flex-wrap: wrap;
+        width: calc(30% - 20px);
+    }
+
+    a{
+        flex-wrap: wrap;
+    }
+    aside{
+        display: none;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    main{
+        flex-wrap: wrap;
+    } 
+    
+    section {
+        width: 100%;
+    }
+
+    header{
+        flex-wrap: wrap;
+        width: calc(80% - 20px);
+    }
+    a{
+        width: calc(80% - 20px);
+    }
+    aside{
+        display: none;
+    }
+}
