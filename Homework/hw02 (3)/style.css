@@ -51,6 +51,7 @@ main {
 
 nav {
     margin-top: 100px;
+    /* font-family: 'Gothic', sans-serif; */
 }
 
 footer {
@@ -86,8 +87,15 @@ a {
     
     display: flex;
     padding-top: 10%;
-    padding-left: 5%;
-    padding-right: 10%;
+    margin-left: 5%;
+    /* padding-left: 5%; */
+    /* padding-right: 10%; */
+
+   
+}
+
+aside a{
+    color: pink;
 }
 
 a i {
@@ -105,6 +113,34 @@ h1 i{
     padding-right: 3%;
 }
 
+aside a.selected {
+   display: flex;
+    border-left: 3px solid green;
+    margin-left: 10px;
+    justify-content: flex-start;
+    color: gray;
+ 
+}
+
+aside #home{
+    color: gray;
+}
+
+#home:hover{
+    color: white;
+}
+
+aside #search{
+    color: gray;
+}
+
+#search:hover {
+    color: white;
+}
+
+a.selected:hover{
+    color:white;
+}
 
 /********************************/
 /* Part B: Header & Nav Styling */
@@ -115,52 +151,94 @@ h1 i{
 header  {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* align-items: flex-end; */
-    padding-right: 40px;
-    padding-left: 900px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    /* padding-left: 810px; */
     /* padding-top: 1%; */
-  
+    text-transform: uppercase;
     /* text-align: center; */
-    height: 20px;
+    /* height: 20px; */
     /* width: 1000px; */
     margin-right: auto;
-    border-radius: 50px;
-   
+    /* border-radius: 50px; */
+
  
     
 }
 
-header a{
+header #upgrade {
     border: solid 1px white;
     border-radius: 50px;
     /* height: 30px; */
     flex-direction: wrap;
-    /* justify-content: flex-end; */
-    margin-top: 10px;
-    /* text-align: center; */
+    align-content: center;
+    /* margin-top: 10px; */
+    text-align: center;
     margin: 10px;
-    
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #E1E0E0;
    
 }
-/* 
-header i{
-    justify-content: center;
-} */
+
+#upgrade:hover{
+    background-color: gray;
+}
+
+header #profile{
+    border: solid 1px #222222;
+    background-color: #222222;
+    border-radius: 50px;
+    flex-direction: wrap;
+    align-content: center;
+    /* margin-top: 10px; */
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: #E1E0E0;
+}
+
+#profile:hover{
+    background-color: gray;
+}
+
+
 
 
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-transform: uppercase;
     padding-right: 65%;
     padding-left: 1%;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+
+
+   
     
 }
 
+nav a.selected{
+    display: flex;
+    border-bottom: 3px solid green;
+    padding-bottom: 5px;
+         
+}
+
+nav a:hover {
+    display: flex;
+    border-bottom: 3px solid green;
+    padding-bottom: 5px;
+}
 
 
 
@@ -209,6 +287,20 @@ section {
     
     /* 292828; */
         
+}
+
+section button{
+    border-radius: 1000px;
+    margin: 1000px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: green;
+    color: white;
+    border-color: none;
+}
+
+section:hover button{
+    display: block;
 }
 
 section div, section button, div h2, div p{
@@ -267,18 +359,17 @@ section img {
 
     header{
         flex-wrap: wrap;
-        width: calc(30% - 20px);
+        /* width: calc(30% - 20px); */
     }
 
     a{
         flex-wrap: wrap;
-    }
-    aside{
-        display: none;
-    }
+
+  
+    }}
 
 
-}
+
 
 
 @media only screen and (max-width: 600px) {
@@ -287,17 +378,37 @@ section img {
     } 
     
     section {
-        width: 100%;
+        width: 40%;
     }
 
     header{
         flex-wrap: wrap;
-        width: calc(80% - 20px);
+        /* width: calc(80% - 20px); */
+        width: 100%;
     }
     a{
         width: calc(80% - 20px);
     }
+    
+    
+
     aside{
         display: none;
     }
+
+    body {
+        overflow: hidden;
+            margin: 0px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto 100px;
+            grid-template-areas:
+               "main"
+               "bottom";
+            height: 100vh;
+        }
+    header {
+        left: 0px;
+        padding-left: 270px;
+        }
 }
