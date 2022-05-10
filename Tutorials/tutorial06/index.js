@@ -100,6 +100,10 @@ const tracks = [
 
 // For --- in ----- :
 
+//two diff loop approaches
+
+//for of loop
+
 let index=0
 for (const track of tracks) {
   const template = `
@@ -112,7 +116,7 @@ for (const track of tracks) {
 
 } 
 
-
+//for each method 
 
 // Part 2: 
 // Using the event object, detect the element that triggered the
