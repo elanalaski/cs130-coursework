@@ -32,8 +32,8 @@ const getAlbums = (term) => {
 
 const getArtistHTML = (artist) => {
     if (!artist.image_url){
-        artist.image_url = "Homework/hw04/profil.png";
-    }//"Tutorials/tutorial06/index.html"
+        artist.image_url = "https://wallpaperaccess.com/full/397972.jpg"
+    }
     return`<section class="artist-card" id="${artist.id}">
     <div>
         <img src="${artist.image_url}">
