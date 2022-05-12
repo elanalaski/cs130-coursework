@@ -32,8 +32,8 @@ const getAlbums = (term) => {
 
 const getArtistHTML = (artist) => {
     if (!artist.image_url){
-        artist.image_url = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fvectors%2Fblank-profile-picture-mystery-man-973460%2F&psig=AOvVaw3BrClTur7GKEnYVS1VcqS7&ust=1652394656607000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOimmva_2PcCFQAAAAAdAAAAABAD"
-    }
+        artist.image_url = "Homework/hw04/profil.png";
+    }//"Tutorials/tutorial06/index.html"
     return`<section class="artist-card" id="${artist.id}">
     <div>
         <img src="${artist.image_url}">
