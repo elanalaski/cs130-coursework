@@ -32,7 +32,7 @@ const getAlbums = (term) => {
 
 const getArtistHTML = (artist) => {
     if (!artist.image_url){
-        artist.image_url = "https://wallpaperaccess.com/full/397972.jpg"
+        artist.image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/2048px-Mr._Smiley_Face.svg.png"
     }
     return`<section class="artist-card" id="${artist.id}">
     <div>
