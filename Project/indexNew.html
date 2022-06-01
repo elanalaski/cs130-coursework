@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My first web page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- YOUR HTML CODE GOES INSIDE THE BODY TAG -->
+       
+        <link rel="stylesheet" href="style.css">
+        <script src="mainnew.js">
+            var modal = document.getElementById("myModal");
+        </script>
+        <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+            /* The Modal (background) */
+           /* The Modal (background) */
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.checkbox{
+  display:none;
+  width: 10px;
+  height:15px;
+ 
+}
+
+          
+        </style>
+<h1 class="Tasks">
+    <img id="menu" src="menu.jpg">
+    <img id=task src="task.jpg" />Tasks
+    <img id="extra" src="extra.jpg">
+ </h1>
+ <hr id="line">
+
+ <h2 class="add_task">
+    <button id="addTask" onclick="openModal()" ><img id="plus" src="plus.jpg"/>
+   
+      <!-- onclick="show()" -->
+   </button>
+   <!-- onclick="show()" -->
+
+
+
+    <!-- Modal content -->
+
+</h2>
+   <div class="cd-schedule loading">
+    <div class="events">
+        <ul class="wrap">
+          <li class="events-group">
+            <div class="top-info"><span>Monday</span></div>
+            <div id="Mondaytasks">
+              <p id="userTask"></p>
+              <input type="checkbox" class="checkbox" id="Box" onclick="finishTask()">
+            </div>
+            <ul>
+              <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+                  <em class="event-name"></em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="14:00" data-end="15:15" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                
+                </a>
+              </li>
+            </ul>
+          </li>
+    
+          <li class="events-group">
+            <div class="top-info"><span>Tuesday</span></div>
+    
+            <ul>
+              <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="11:30" data-end="13:00" data-content="event-restorative-yoga" data-event="event-4">
+                <a href="#0">
+                  <em class="event-name">Restorative Yoga</em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+             
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="15:45" data-end="16:45" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                </a>
+              </li>
+            </ul>
+          </li>
+    
+          <li class="events-group">
+            <div class="top-info"><span>Wednesday</span></div>
+    
+            <ul>
+              <li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
+                <a href="#0">
+                  
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                  
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="12:00" data-end="13:45" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                 
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                
+                </a>
+              </li>
+            </ul>
+          </li>
+    
+          <li class="events-group">
+            <div class="top-info"><span>Thursday</span></div>
+    
+            <ul>
+              <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+                  
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4">
+                <a href="#0">
+                 
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+                 
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="17:00" data-end="18:30" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                  
+                </a>
+              </li>
+            </ul>
+          </li>
+    
+          <li class="events-group">
+           
+            <div class="top-info"><span>Friday</span></div>
+            <ul>
+              <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+                  <em class="event-name">Abs Circuit</em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="15:45" data-end="16:45" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                  <em class="event-name">Yoga Level 1</em>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--        -->
+          <li class="events-group">
+            <div class="top-info"><span>Saturday</span></div>
+            <ul>
+              <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+                  <em class="event-name">Abs Circuit</em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                  <em class="event-name">Rowing Workout</em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="14:00" data-end="15:15" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                  <em class="event-name">Yoga Level 1</em>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--        -->
+    
+          <!--        -->
+          <li class="events-group">
+            <div class="top-info"><span>Sunday</span></div>
+            <ul>
+              <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+                <a href="#0">
+                  <em class="event-name">Abs Circuit</em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+                <a href="#0">
+                  <em class="event-name">Rowing Workout</em>
+                </a>
+              </li>
+    
+              <li class="single-event" data-start="14:00" data-end="15:15" data-content="event-yoga-1" data-event="event-3">
+                <a href="#0">
+                  <em class="event-name">Yoga Level 1</em>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--        -->
+        </ul>
+      </div>
+    
+      <div class="event-modal">
+        <header class="header">
+          <div class="content">
+            <span class="event-date"></span>
+            <h3 class="event-name"></h3>
+          </div>
+    
+          <div class="header-bg"></div>
+        </header>
+    
+        <div class="body">
+          <div class="event-info"></div>
+          <div class="body-bg"></div>
+        </div>
+    
+        <a href="#0" class="close">Close</a>
+      </div>
+    
+      <div class="cover-layer"></div>
+    </div> <!-- .cd-schedule -->
+    
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- <div> -->
+          <form id="newTask" action="/action_page.php">
+            <label for="addtask">Add task:</label><br>
+            <input type="text" id="addask" task="addtask"><br>
+
+            <!-- <label for="day">Day:</label><br> -->
+            <!-- <input type="text" id="day" day="day" value=none><br><br> -->
+            <input type="button" id="save" value= "save" onclick="displayTask()">
+          </form>
+
+        <!-- </div>  -->
+        
+
+      </div>
+      
+  </div>
+
+  
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

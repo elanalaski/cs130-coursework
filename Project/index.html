@@ -1,0 +1,303 @@
+<!-- You're welcome to change any of this!
+<!DOCTYPE html> -->
+<!-- <html lang="en">
+    
+   <head> -->
+        <!-- stylesheets and metadata go here -->
+       <!-- <title>Tasks</title> 
+  
+       
+       <link rel="stylesheet" href="style.css">
+       
+   </head>
+   <body> -->
+       <!-- HTML content tags go here. Change anything you want! -->
+       <!-- <header>
+           <h1><strong>Tasks</strong></h1> -->
+           <!-- <hr size="5" noshade=""> -->
+       <!-- </header> 
+       <main>
+       
+            <section id="leftSide">
+                <div class="square">
+                    <div class="content">
+                    </div>
+                  </div> -->
+                <!-- <h2></h2> -->
+                <!-- 
+                    Links to your tutorial assignments go here.
+                    When you submit a new tutorial, add a link to it
+                    here (if applicable)
+                -->
+                
+                
+               
+                <!-- <section id="rightSide">
+                 <hr size="1" noshade=""> -->
+                <!-- <h2>Homework</h2>  -->
+                <!-- <section id="leftSide">
+                    <div class="square">
+                        <div class="content">
+                        </div>
+                      </div>
+                 -->
+
+        
+                <!-- 
+                    Links to your Homework assignments go here.
+                    When you submit a new HW assignment, add a link to it here (if applicable)
+                -->
+            
+            
+
+<!-- 
+        </main>
+   </body>
+</html>  -->
+
+<br />
+<link rel="stylesheet" href="style.css">
+<script src="main.js">
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+ 
+  #input {display: none};
+  </style>
+
+<h1 class="Tasks">Tasks
+   <img src="task.jpg" />
+</h1>
+
+<h2 class="add_task">
+ <button id="addTask" onclick="show()" id="addTask" ><img src="plus.jpg"/>
+
+</button>
+ <!-- <img id = "input" src="input.jpg"/> -->
+</h2>
+
+<div class="cd-schedule loading">
+
+ 
+
+
+  <div class="events">
+    <ul class="wrap">
+      <li class="events-group">
+        <div class="top-info"><span>Monday</span></div>
+        <ul>
+          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name"></em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="14:00" data-end="15:15" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Tuesday</span></div>
+
+        <ul>
+          <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="11:30" data-end="13:00" data-content="event-restorative-yoga" data-event="event-4">
+            <a href="#0">
+              <em class="event-name">Restorative Yoga</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name">Abs Circuit</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="15:45" data-end="16:45" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Wednesday</span></div>
+
+        <ul>
+          <li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
+            <a href="#0">
+              <em class="event-name">Restorative Yoga</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="12:00" data-end="13:45" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Thursday</span></div>
+
+        <ul>
+          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name">Abs Circuit</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4">
+            <a href="#0">
+              <em class="event-name">Restorative Yoga</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name">Abs Circuit</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="17:00" data-end="18:30" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Friday</span></div>
+
+        <ul>
+          <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name">Abs Circuit</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="15:45" data-end="16:45" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--        -->
+      <li class="events-group">
+        <div class="top-info"><span>Saturday</span></div>
+        <ul>
+          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name">Abs Circuit</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="14:00" data-end="15:15" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--        -->
+
+      <!--        -->
+      <li class="events-group">
+        <div class="top-info"><span>Sunday</span></div>
+        <ul>
+          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+            <a href="#0">
+              <em class="event-name">Abs Circuit</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+            <a href="#0">
+              <em class="event-name">Rowing Workout</em>
+            </a>
+          </li>
+
+          <li class="single-event" data-start="14:00" data-end="15:15" data-content="event-yoga-1" data-event="event-3">
+            <a href="#0">
+              <em class="event-name">Yoga Level 1</em>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--        -->
+    </ul>
+  </div>
+
+  <div class="event-modal">
+    <header class="header">
+      <div class="content">
+        <span class="event-date"></span>
+        <h3 class="event-name"></h3>
+      </div>
+
+      <div class="header-bg"></div>
+    </header>
+
+    <div class="body">
+      <div class="event-info"></div>
+      <div class="body-bg"></div>
+    </div>
+
+    <a href="#0" class="close">Close</a>
+  </div>
+
+  <div class="cover-layer"></div>
+</div> <!-- .cd-schedule -->
+
+<div id="newTask">
+  <form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+</div>
