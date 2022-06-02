@@ -765,11 +765,19 @@ p{
 
 #Mondaytasks{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
   padding: 10px;
 }
 
 #Box{
   margin-top: 10px;
   width: 50px;
+}
+
+.row{
+  width:100%;
+  border:solid 1px black;
+  display: flex;
+  justify-content: space-between;
 }
