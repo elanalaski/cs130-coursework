@@ -18,7 +18,7 @@
             /* The Modal (background) */
            /* The Modal (background) */
 .modal{
-  display: none; /* Hidden by default */
+  /* display: none; Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
@@ -29,6 +29,14 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#myModal{
+  display:none;
+}
+
+#myModal2{
+  display:none;
 }
 
 /* Modal Content */
@@ -65,14 +73,14 @@
           
         </style>
 <h1 class="Tasks">
-    <img id="menu" src="menu.jpg">
-    <img id=task src="task.jpg" />Tasks
-    <img id="extra" src="extra.jpg">
+    <img id="menu" alt="Menu button" src="menu.jpg">
+    <img id=task alt="Task Icon" src="task.jpg" />Tasks
+    <img id="extra" alt="Google Suite Nav Bar"src="extra.jpg">
  </h1>
  <hr id="line">
 
  <h2 class="add_task">
-    <button id="addTask" onclick="openModal()" ><img id="plus" src="plus.jpg"/>
+    <button id="addTask" onclick="openModal()" ><img id="plus" alt="Add Task Sign" src="plus.jpg"/>
    
       <!-- onclick="show()" -->
    </button>
@@ -115,6 +123,8 @@
     
           <li class="events-group">
             <div class="top-info"><span>Tuesday</span></div>
+            <div id="Tuesdaytasks">
+            </div>
     
             <ul>
               <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-rowing-workout" data-event="event-2">
@@ -144,6 +154,8 @@
     
           <li class="events-group">
             <div class="top-info"><span>Wednesday</span></div>
+            <div id="Wednesdaytasks">
+            </div>
     
             <ul>
               <li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
@@ -174,6 +186,8 @@
     
           <li class="events-group">
             <div class="top-info"><span>Thursday</span></div>
+            <div id="Thursdaytasks">
+            </div>
     
             <ul>
               <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
@@ -205,6 +219,8 @@
           <li class="events-group">
            
             <div class="top-info"><span>Friday</span></div>
+            <div id="Fridaytasks">
+            </div>
             <ul>
               <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-rowing-workout" data-event="event-2">
                 <a href="#0">
@@ -228,6 +244,8 @@
           <!--        -->
           <li class="events-group">
             <div class="top-info"><span>Saturday</span></div>
+            <div id="Saturdaytasks">
+            </div>
             <ul>
               <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
                 <a href="#0">
@@ -253,6 +271,8 @@
           <!--        -->
           <li class="events-group">
             <div class="top-info"><span>Sunday</span></div>
+            <div id="Sundaytasks">
+            </div>
             <ul>
               <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
                 <a href="#0">
@@ -304,19 +324,38 @@
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <!-- <div> -->
-          <form id="newTask" action="/action_page.php">
+          <form id="newTask" aria-label="Add Task Form" action="/action_page.php">
             <label for="addtask">Add task:</label><br>
             <input type="text" id="addask" task="addtask"><br>
+            <br>
+            <label for="dayOptions" id="dayLabel">Day</label></form>
+            <select name="Days" id="Days">
+              <option value="Select Day">Select Day</option>
+              <option value="Monday" id="Monday">Monday</option>
+              <option value="Tuesday" id="Tuesday">Tuesday</option>
+              <option value="Wednesday" id="Wednesday">Wednesday</option>
+              <option value="Thursday" id="Thursday">Thursday</option>
+              <option value="Friday" id="Friday">Friday</option>
+              <option value="Saturday" id="Saturday">Saturday</option>
+              <option value="Sunday" id="Sunday">Sunday</option>
 
             <!-- <label for="day">Day:</label><br> -->
             <!-- <input type="text" id="day" day="day" value=none><br><br> -->
-            <input type="button" id="save" value= "save" onclick="displayTask()">
+            <label for="submit button">Save</label><br>
+            <input type="button" id="save" value= "save"  onclick="displayTask()">
           </form>
 
         <!-- </div>  -->
         
 
       </div>
+
+      <div id="myModal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>Please select a day before saving a task</p>
+        </div>
+
       
   </div>
 

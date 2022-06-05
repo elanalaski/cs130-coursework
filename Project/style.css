@@ -724,11 +724,10 @@ Main Components
 #addTask{
   border: none;
   background-color: white;
+ 
 }
 
-hr{
-  color: red;
-}
+
 
 #task{
   width:60px;
@@ -777,7 +776,8 @@ p{
 
 .row{
   width:100%;
-  border:solid 1px black;
+  /* border:solid 1px black; */
   display: flex;
   justify-content: space-between;
 }
+
